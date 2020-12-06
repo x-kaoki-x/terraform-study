@@ -1,0 +1,10 @@
+version: "3"
+services:
+  staging:
+    build:
+      context: .
+      dockerfile: ./staging/Dockerfile
+    image: my-terraform:staging
+    volumes:
+      - ./staging:/terraform/staging
+      - ./modules:/terraform/modules
