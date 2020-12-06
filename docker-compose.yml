@@ -5,6 +5,7 @@ services:
       context: .
       dockerfile: ./staging/Dockerfile
     image: my-terraform:staging
+    env_file: .env.staging
     volumes:
       - ./staging:/terraform/staging
       - ./modules:/terraform/modules
